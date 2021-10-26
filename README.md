@@ -79,12 +79,31 @@ Expected Output: 0
 
 
 
+Describe: commonWordCounter()
 
+Test: "If an empty string is passed, it should return 0."
+Code: 
+const text = "";
+commonWordCounter(text);
+Expected Output: 0
 
+Test: "If passage is one word, it should return that word"
+Code:
+const text = "red";
+commonWordCounter(text);
+Expected Output: "red: 1"
 
+Test: "If passage is two different words, it should return an array with 2 elements, one with "red: 1" and another with "blue: 1".
+Code:
+const text = "red blue";
+commonWordCounter(text);
+Expected Output: ["red: 1", "blue: 1"]
 
-
-
+Test: "If passage is two of the same word, it should return an array with one element, a string "red: 2".
+Code:
+const text = "red red";
+commonWordCounter(text);
+Expected Output: ["red: 2"]
 
 
 
