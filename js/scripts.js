@@ -35,14 +35,17 @@ function numberOfOccurrencesInText(word, text) {
 }
 
 function commonWordCounter(text) {
-  let mostCommonWords = [];
   if (text.length === 0) {
-    return "";
+    return 0;
   } else {
-    
+    let mostCommonWords = [];
     const wordArray = text.split(" ");
     wordArray.forEach(function(word){
+    if (numberOfOccurrencesInText(word, text) > 1){
+      mostCommonWords[0] = word + ": 2";
+    } else {
       mostCommonWords.push(word + ": 1");
+    }
     });
     return mostCommonWords;
   }
