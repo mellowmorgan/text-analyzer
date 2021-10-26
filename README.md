@@ -105,6 +105,11 @@ const text = "red red";
 commonWordCounter(text);
 Expected Output: ["red: 2"]
 
+Test: "If passage is three different words, return each word with value of one in array."
+Code: 
+const text = "red blue green";
+dommonWordCounter(text);
+Expected Output: ["red: 1", "blue: 1", "green: 1"]
 
 
 
