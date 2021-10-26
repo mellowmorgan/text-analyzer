@@ -39,11 +39,12 @@ function commonWordCounter(text) {
     return 0;
   } else {
     let mostCommonWords = [];
+    let uncommonWords = [];
     const wordArray = text.split(" ");
     wordArray.forEach(function(word){
     if (numberOfOccurrencesInText(word, text) > 1){
       mostCommonWords.push(word + ": " + numberOfOccurrencesInText(word,text));
-    } else {
+    } else if (wordArray.length===3){
       mostCommonWords.push(word + ": 1");
     }
     });
