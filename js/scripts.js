@@ -34,6 +34,21 @@ function numberOfOccurrencesInText(word, text) {
   return wordCount;
 }
 
+//similar to numberOfOccurrences but finds whole word, not in another
+function wordOccurrences(word, text) {
+  if (noInputtedWord(word, text)) {
+    return 0;
+  }
+  const wordArray = text.split(" ");
+  let wordCount = 0;
+  wordArray.forEach(function(element) {
+    if (element.toLowerCase()===word.toLowerCase()) {
+      wordCount++;
+    }
+  });
+  return wordCount;
+}
+
 function commonWordCounter(text) {
   if (text.length === 0) {
     return 0;
