@@ -54,38 +54,29 @@ function commonWordCounter(text) {
     return 0;
   } else {
     let topElementCount=0;
+    let notYetAdded=true;
+    let object;
     let mostCommonWords = [];
     const wordArray = text.split(" ");
     wordArray.forEach(function(word){
-      currentElementCount=wordOccurrences(word,text)
-    if (currentElementCount>1){
-      mostCommonWords.push(word.toLowerCase() + ": " + currentElementCount);
-    } else if (wordArray.length===3){
-      mostCommonWords.push(word.toLowerCase() + ": 1");
-    }
-    });
-    //remove duplicates
-    mostCommonWordsSet = new Set(mostCommonWords);
-    mostCommonWords = Array.from(mostCommonWordsSet);
-    //find 3 largest by element last character (convert to number)
-    let occurrences=0;
-    let isHighest =false;
-    let highestArray = [];
-    mostCommonWords.forEach(function(element){
-      occurrences = element.charAt(element.length-1)
-      highestArray.forEach(function(toCompare){
-        if (occurrences>toCompare){
-          isHighest=true;
-        }
-        else{
-          isHighest=false;
-        } 
+      currentElementCount=wordOccurrences(word,text);
+      mostCommonWords.forEach(function(element){
+        if(element.wordString===word.toLowerCase())
+          {notYetAdded=false;}
       });
-      if(isHighest){
-        highestArray.unshift(element);
-      }
+
+    if (currentElementCount>1 && notYetAdded){
+      object = {wordString: word.toLowerCase(), wordOccurrences: currentElementCount};
+      mostCommonWords.push(object);
+    } else if (wordArray.length===3){
+      object = {wordString: word.toLowerCase(), wordOccurrences: 1};
+      mostCommonWords.push(object);
+    }
+    notYetAdded=true;
     });
-    return highestArray;
+    mostCommonWords.sort((a, b) => (a.wordOccurrences > b.wordOccurrences) ? -1 : 1);
+    const threeMostCommonWords = [mostCommonWords[0],mostCommonWords[1],mostCommonWords[2]];
+    return threeMostCommonWords;
   }
 }
 
