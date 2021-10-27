@@ -107,9 +107,14 @@ $(document).ready(function(){
     const passage = $("#text-passage").val();
     const word = $("#word").val();
     const wordCount = wordCounter(passage);
+    const mostCommonList = commonWordCounter(passage);
     const occurrencesOfWord = numberOfOccurrencesInText(word, passage);
     $("#total-count").html(wordCount);
     $("#selected-count").html(occurrencesOfWord);
     $("#bolded-passage").html(boldPassage(word, passage));
+    $("#most-common-list-1").html(mostCommonList[0].wordString + ": " + mostCommonList[0].wordOccurrences);
+    $("#most-common-list-2").html(mostCommonList[1].wordString + ": " + mostCommonList[1].wordOccurrences);
+    $("#most-common-list-3").html(mostCommonList[2].wordString + ": " + mostCommonList[2].wordOccurrences);
+
   });
 });
