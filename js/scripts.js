@@ -53,19 +53,39 @@ function commonWordCounter(text) {
   if (text.length === 0) {
     return 0;
   } else {
+    let topElementCount=0;
     let mostCommonWords = [];
-    let uncommonWords = [];
     const wordArray = text.split(" ");
     wordArray.forEach(function(word){
-    if (numberOfOccurrencesInText(word, text) > 1){
-      mostCommonWords.push(word + ": " + numberOfOccurrencesInText(word,text));
+      currentElementCount=wordOccurrences(word,text)
+    if (currentElementCount>1){
+      mostCommonWords.push(word.toLowerCase() + ": " + currentElementCount);
     } else if (wordArray.length===3){
-      mostCommonWords.push(word + ": 1");
+      mostCommonWords.push(word.toLowerCase() + ": 1");
     }
     });
+    //remove duplicates
     mostCommonWordsSet = new Set(mostCommonWords);
     mostCommonWords = Array.from(mostCommonWordsSet);
-    return mostCommonWords;
+    //find 3 largest by element last character (convert to number)
+    let occurrences=0;
+    let isHighest =false;
+    let highestArray = [];
+    mostCommonWords.forEach(function(element){
+      occurrences = element.charAt(element.length-1)
+      highestArray.forEach(function(toCompare){
+        if (occurrences>toCompare){
+          isHighest=true;
+        }
+        else{
+          isHighest=false;
+        } 
+      });
+      if(isHighest){
+        highestArray.unshift(element);
+      }
+    });
+    return highestArray;
   }
 }
 
