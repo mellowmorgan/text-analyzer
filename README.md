@@ -113,22 +113,21 @@ Expected Output: ["red: 1", "blue: 1", "green: 1"]
 
 
 
-# _{Application Name}_
+# Text Analyzer
 
-#### By _**{List of contributors}**_
+#### By Frank Proulx and Morgan Waites
 
-#### _{Brief description of application}_
+#### Analyzes text input.
 
 ## Technologies Used
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+* HTML/CSS
+* Javascript 
+* Bootstrap
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+User inputs chunk of text and upon submitting, webpage displays total number of words and other info.
 
 ## Setup/Installation Requirements
 
@@ -139,15 +138,8 @@ _{This is a detailed description of your application. Give as much detail as nee
 
 ## Link to [GitHub Pages](https://frank-proulx.github.io//)
 
-## Known Bugs
-
-* _Any known issues_
-* _should go here_
-
 ## License
 
 [MIT](https://opensource.org/licenses/MIT)
 
-If you have any issues, questions, ideas or concerns, please reach out to me at my email and/or make a contribution to the code via GitHub.
-
-Copyright (c) 2021 Frank Proulx
+Copyright (c) 2021 Frank Proulx and Morgan Waites
