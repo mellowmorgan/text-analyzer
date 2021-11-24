@@ -1,3 +1,36 @@
+# Text Analyzer
+
+#### By Frank Proulx and Morgan Waites
+
+#### Analyzes text input.
+
+## Technologies Used
+
+* HTML/CSS
+* Javascript 
+* Bootstrap
+
+## Description
+
+User inputs chunk of text and upon submitting, webpage displays total number of words and other info.
+
+## Setup/Installation Requirements
+
+* Create and/or navigate to the directory you would like to contain this project on your computer.
+* Initialize a git repository by typing **git init** in the terminal.
+* Type **git clone https://github.com/Frank-Proulx/insert_name_here** to clone the repository to your local machine.
+* Open the file "index.html" in the newly created "portfolio-landing" folder using either the GUI in your finder window, or typing **cd insert_name_here** and pressing return to navigate into the project folder, and then typing **open index.html** in the terminal from within the portfolio-landing folder.  
+
+## Link to [GitHub Pages](https://frank-proulx.github.io//)
+
+## License
+
+[MIT](https://opensource.org/licenses/MIT)
+
+Copyright (c) 2021 Frank Proulx and Morgan Waites
+
+## Tests
+
 Describe: wordCounter()
 
 Test: "It should return 1 if a passage has just one word."
@@ -110,36 +143,3 @@ Code:
 const text = "red blue green";
 dommonWordCounter(text);
 Expected Output: ["red: 1", "blue: 1", "green: 1"]
-
-
-
-# Text Analyzer
-
-#### By Frank Proulx and Morgan Waites
-
-#### Analyzes text input.
-
-## Technologies Used
-
-* HTML/CSS
-* Javascript 
-* Bootstrap
-
-## Description
-
-User inputs chunk of text and upon submitting, webpage displays total number of words and other info.
-
-## Setup/Installation Requirements
-
-* Create and/or navigate to the directory you would like to contain this project on your computer.
-* Initialize a git repository by typing **git init** in the terminal.
-* Type **git clone https://github.com/Frank-Proulx/insert_name_here** to clone the repository to your local machine.
-* Open the file "index.html" in the newly created "portfolio-landing" folder using either the GUI in your finder window, or typing **cd insert_name_here** and pressing return to navigate into the project folder, and then typing **open index.html** in the terminal from within the portfolio-landing folder.  
-
-## Link to [GitHub Pages](https://frank-proulx.github.io//)
-
-## License
-
-[MIT](https://opensource.org/licenses/MIT)
-
-Copyright (c) 2021 Frank Proulx and Morgan Waites
