@@ -17,11 +17,8 @@ User inputs chunk of text and upon submitting, webpage displays total number of 
 ## Setup/Installation Requirements
 
 * Create and/or navigate to the directory you would like to contain this project on your computer.
-* Initialize a git repository by typing **git init** in the terminal.
-* Type **git clone https://github.com/Frank-Proulx/insert_name_here** to clone the repository to your local machine.
-* Open the file "index.html" in the newly created "portfolio-landing" folder using either the GUI in your finder window, or typing **cd insert_name_here** and pressing return to navigate into the project folder, and then typing **open index.html** in the terminal from within the portfolio-landing folder.  
-
-## Link to [GitHub Pages](https://frank-proulx.github.io//)
+* Type git clone this repository to clone the repository to your local machine.
+* In terminal type open index.html.
 
 ## License
 
@@ -56,8 +53,6 @@ Expected Output: 0
 Test: "It should not count numbers as words."
 Code: wordCounter("hi there 77 19");
 Expected Output: 2
-
-
 
 Describe: numberOfOccurrencesInText()
 
@@ -109,8 +104,6 @@ const word = "";
 const text = "red RED Red!";
 wordCounter(word, text);
 Expected Output: 0
-
-
 
 Describe: commonWordCounter()
 
