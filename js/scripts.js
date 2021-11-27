@@ -115,6 +115,6 @@ $(document).ready(function(){
     $("#most-common-list-1").html(mostCommonList[0].wordString + ": " + mostCommonList[0].wordOccurrences);
     $("#most-common-list-2").html(mostCommonList[1].wordString + ": " + mostCommonList[1].wordOccurrences);
     $("#most-common-list-3").html(mostCommonList[2].wordString + ": " + mostCommonList[2].wordOccurrences);
-
+    $("#passage").html(passage);
   });
 });
